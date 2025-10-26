@@ -1,8 +1,24 @@
-# 在此文件中实现 PrimeList 函数
+def isOdd(value):
+    """
+    判断输入是否为奇整数
+    参数:
+    value - 任意类型的输入值
+    返回:
+    bool - 如果是整数且为奇数返回 True，否则返回 False
+    """
+    # 判断类型是否为整数
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, int):
+        if value % 2 != 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
-def PrimeList(N):
-    """
-    返回小于 N 的所有质数，以空格分隔    
-    参数:    N - 正整数    
-    返回:    str - 包含所有小于 N 的质数的字符串，空格分隔
-    """
+# 主程序部分，用于测试isOdd函数
+if __name__ == "__main__":
+    N = input()
+    num = isOdd(N)
+    print(num)
